@@ -20,10 +20,10 @@
         jQuery的需求分析与设计部分
         负责jQuery项目的css部分代码编写，并上传github。
         
-        陈尧（chenyao1306410119）
+  陈尧（chenyao1306410119）
         jQuery的JavaScript部分代码编写工作
         
-        丁聪（dingcong1306410120）
+  丁聪（dingcong1306410120）
         jQuery的HTML页面代码编写工作
         以及img图片的寻找和适配
         
