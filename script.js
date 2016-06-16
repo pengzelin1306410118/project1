@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	
-	// The select element to be replaced:
 	var select = $('select.makeMeFancy');
 
 	var selectBoxContainer = $('<div>',{
@@ -12,7 +11,6 @@ $(document).ready(function(){
 	var dropDown = $('<ul>',{className:'dropDown'});
 	var selectBox = selectBoxContainer.find('.selectBox');
 	
-	// Looping though the options of the original select element
 	
 	select.find('option').each(function(i){
 		var option = $(this);
@@ -21,15 +19,12 @@ $(document).ready(function(){
 			selectBox.html(option.text());
 		}
 		
-		// As of jQuery 1.4.3 we can access HTML5 
-		// data attributes with the data() method.
 		
 		if(option.data('skip')){
 			return true;
 		}
 		
-		// Creating a dropdown item according to the
-		// data-icon and data-html-text HTML5 attributes:
+
 		
 		var li = $('<li>',{
 			html:	'<img src="'+option.data('icon')+'" /><span>'+
@@ -41,8 +36,7 @@ $(document).ready(function(){
 			selectBox.html(option.text());
 			dropDown.trigger('hide');
 			
-			// When a click occurs, we are also reflecting
-			// the change on the original select element:
+
 			select.val(option.val());
 			
 			return false;
@@ -54,7 +48,6 @@ $(document).ready(function(){
 	selectBoxContainer.append(dropDown.hide());
 	select.hide().after(selectBoxContainer);
 	
-	// Binding custom show and hide events on the dropDown:
 	
 	dropDown.bind('show',function(){
 		
@@ -86,8 +79,7 @@ $(document).ready(function(){
 		return false;
 	});
 
-	// If we click anywhere on the page, while the
-	// dropdown is shown, it is going to be hidden:
+
 	
 	$(document).click(function(){
 		dropDown.trigger('hide');
